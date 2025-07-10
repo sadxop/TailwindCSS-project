@@ -6,11 +6,11 @@
     <title>TailwindCSS</title>
     <link rel="stylesheet" href="public/styles.css" />
   </head>
-  <body>
+  <body class="bg-white dark:bg-slate-900">
     <div class="max-w-screen-xl mx-auto">
       <!-- header -->
       <header class="px-2 border-b flex items-center justify-between h-14">
-        <a class="uppercase font-bold text-purple-800" href="#">webDev</a>
+        <a class="dark:text-purple-500 uppercase font-bold text-purple-800" href="#">Tech Digest</a>
         <nav class="hidden md:flex items-center">
           <ul class="flex items-center">
             <li><a class="header-link" href="#">Home</a></li>
@@ -32,7 +32,7 @@
       <!-- breadcrumbs -->
       <div class="px-2 flex items-center">
         <div class="py-4 overflow-auto whitespace-nowrap flex items-center">
-          <a class="text-gray-600 hover:text-gray-900" href="#">
+          <a class="dark:text-slate-400 text-gray-600 hover:text-gray-900 transition-all duration-300" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
@@ -42,13 +42,13 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>
           </span>
-          <a class="text-gray-600 hover:text-gray-900" href="#">News</a>
+          <a class="dark:text-slate-400 text-gray-600 hover:text-gray-900 transition-all duration-300" href="#">News</a>
           <span class="mx-2 text-gray-300">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
             </svg>
           </span>
-          <a class="text-gray-600 hover:text-gray-900" href="#">Tech</a>
+          <a class="dark:text-slate-400 text-gray-600 hover:text-gray-900 transition-all duration-300" href="#">Tech</a>
         </div>
       </div>
 
@@ -59,6 +59,14 @@
           <img class="absolute top-0 left-0 w-full h-full z-0 object-cover" src="./public/images/1.jpg" alt="news banner 1">
           <div class="p-4 absolute bottom-0 left-0 z-20">
             <h2 class="text-4xl font-semibold text-gray-100 leading-tight">Всем привееет, тесст</h2>
+            <span class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-semibold rounded-full px-3 py-1 inline-flex items-center justify-center shadow-md mt-1">Приветсвие</span>
+            <div class="flex mt-3">
+              <img class="h-10 w-10 rounded-full mr-2 object-cover" src="./public/images/7.jpg" alt="author">
+              <div>
+                <p class="font-semibold text-gray-200 text-sm">Soulassk</p>
+                <time class="text-gray-400 text-xs" datetime="09-07-2025">9 July</time>
+              </div>
+            </div>
           </div>
         </a>
 
@@ -67,6 +75,14 @@
           <img class="absolute top-0 left-0 w-full h-full z-0 object-cover" src="./public/images/2.jpg" alt="news banner 2">
           <div class="p-4 absolute bottom-0 left-0 z-20">
             <h2 class="text-4xl font-semibold text-gray-100 leading-tight">Мой путь до фронтенд разработчика</h2>
+            <span class="bg-gradient-to-bl from-blue-500 via-sky-500 to-indigo-500 text-white text-sm font-semibold rounded-full px-3 py-1 inline-flex items-center justify-center shadow-md mt-2">Road to frontend</span>
+            <div class="flex mt-3">
+              <img class="h-10 w-10 rounded-full mr-2 object-cover" src="./public/images/7.jpg" alt="author">
+              <div>
+                <p class="font-semibold text-gray-200 text-sm">Soulassk</p>
+                <time class="text-gray-400 text-xs" datetime="06-07-2025">6 July</time>
+              </div>
+            </div>
           </div>
         </a>
       </section>
@@ -77,24 +93,51 @@
         <div class="w-full lg:w-2/3">
           <section class="px-2">
             <!-- пост 1 -->
-            <a class="flex mb-10" href="#">
-              <img class="h-48 w-48 opacity-80 object-cover mr-4" src="./public/images/4.jpg" alt="frontend">
-              <div>
-                <h3 class="mt-3 mb-2 text-gray-700 font-bold text-2xl">Что такое фронтенд и зачем он нужен?</h3>
-                <p class="text-gray-500">Фронтенд — это часть сайта или приложения, которую видит и с которой взаимодействует пользователь...</p>
+            <a class="block w-full lg:flex mb-10" href="#">
+              <img class="w-full h-48 lg:w-48 opacity-80 object-cover lg:mr-4" src="./public/images/4.jpg" alt="frontend">
+              <div class="flex-1">
+                <h3 class="mt-3 mb-2 text-gray-700 dark:text-white font-bold text-2xl">Что такое фронтенд и зачем он нужен?</h3>
+                <p class="text-gray-500 dark:text-slate-400 mb-3">Фронтенд — это часть сайта или приложения, которую видит и с которой взаимодействует пользователь...</p>
+                <div class="flex mt-3">
+                  <img class="h-10 w-10 rounded-full mr-2 object-cover" src="./public/images/8.jpg" alt="author">
+                  <div>
+                    <p class="font-semibold text-gray-700 text-sm">Carl</p>
+                    <time class="text-gray-400 text-xs" datetime="2025-07-09">9 July</time>
+                  </div>
+                </div>
               </div>
             </a>
 
             <!-- пост 2 -->
-            <a class="block mb-10" href="#">
-              <h3 class="mt-3 mb-2 text-gray-700 font-bold text-2xl">Как начать путь в программировании?</h3>
-              <p class="text-gray-500">Мир IT кажется сложным, но начать можно с малого...</p>
+            <a class="block w-full lg:flex mb-10" href="#">
+              <img class="w-full h-48 lg:w-48 opacity-80 object-cover lg:mr-4" src="./public/images/5.jpg" alt="programming">
+              <div class="flex-1">
+                <h3 class="mt-3 mb-2 text-gray-700 dark:text-white font-bold text-2xl">Как начать путь в программировании?</h3>
+                <p class="text-gray-500 dark:text-slate-400 mb-3">Мир IT кажется сложным, но начать можно с малого...</p>
+                <div class="flex mt-3">
+                  <img class="h-10 w-10 rounded-full mr-2 object-cover" src="./public/images/10.jpg" alt="author">
+                  <div>
+                    <p class="font-semibold text-gray-700 text-sm">John</p>
+                    <time class="text-gray-400 text-xs" datetime="2025-07-09">9 July</time>
+                  </div>
+                </div>
+              </div>
             </a>
 
             <!-- пост 3 -->
-            <a class="block mb-10" href="#">
-              <h3 class="mt-3 mb-2 text-gray-700 font-bold text-2xl">Искусственный интеллект вокруг нас</h3>
-              <p class="text-gray-500">ИИ — это технология, которая позволяет машинам учиться, анализировать и принимать решения...</p>
+            <a class="block w-full lg:flex mb-10" href="#">
+              <img class="w-full h-48 lg:w-48 opacity-80 object-cover lg:mr-4" src="./public/images/6.jpg" alt="AI">
+              <div class="flex-1">
+                <h3 class="mt-3 mb-2 text-gray-700 dark:text-white font-bold text-2xl">Искусственный интеллект вокруг нас</h3>
+                <p class="text-gray-500 dark:text-slate-400 mb-3">ИИ — это технология, которая позволяет машинам учиться, анализировать и принимать решения...</p>
+                <div class="flex mt-3">
+                  <img class="h-10 w-10 rounded-full mr-2 object-cover" src="./public/images/9.jpg" alt="author">
+                  <div>
+                    <p class="font-semibold text-gray-700 text-sm">Steve</p>
+                    <time class="text-gray-400 text-xs" datetime="2025-07-09">9 July</time>
+                  </div>
+                </div>
+              </div>
             </a>
           </section>
         </div>
@@ -104,34 +147,34 @@
           <div class="md:flex gap-6">
             <!-- popular news -->
             <div class="w-full md:w-1/2 mb-5">
-              <h5 class="font-bold text-lg uppercase text-gray-700 mb-2">Popular news</h5>
+              <h5 class="font-bold text-lg uppercase text-gray-700 dark:text-white mb-2">Popular news</h5>
               <ul>
-                <li class="px-1 py-4 border-y border-white hover:border-gray-200">
-                  <a class="flex items-center text-gray-600" href="#">
+                <li class="dark:border-transparent dark:hover:border-gray-200 px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-300">
+                  <a class="dark:text-slate-400 flex items-center text-gray-600" href="#">
                     <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-green-500 to-green-700"></span>
                     Vue
-                    <span class="text-gray-500 ml-auto">23 articles</span>
+                    <span class="dark:text-slate-400 text-gray-500 ml-auto">23 articles</span>
                   </a>
                 </li>
-                <li class="px-1 py-4 border-y border-white hover:border-gray-200">
-                  <a class="flex items-center text-gray-600" href="#">
+                <li class="dark:border-transparent dark:hover:border-gray-200 px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-300">
+                  <a class="dark:text-slate-400 flex items-center text-gray-600" href="#">
                     <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-orange-500 to-orange-700"></span>
                     Svelte
-                    <span class="text-gray-500 ml-auto">20 articles</span>
+                    <span class="dark:text-slate-400 text-gray-500 ml-auto">20 articles</span>
                   </a>
                 </li>
-                <li class="px-1 py-4 border-y border-white hover:border-gray-200">
-                  <a class="flex items-center text-gray-600" href="#">
+                <li class="dark:border-transparent dark:hover:border-gray-200 px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-300">
+                  <a class="dark:text-slate-400 flex items-center text-gray-600" href="#">
                     <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-red-500 to-red-700"></span>
                     Angular
-                    <span class="text-gray-500 ml-auto">15 articles</span>
+                    <span class="dark:text-slate-400 text-gray-500 ml-auto">15 articles</span>
                   </a>
                 </li>
-                <li class="px-1 py-4 border-y border-white hover:border-gray-200">
-                  <a class="flex items-center text-gray-600" href="#">
+                <li class="dark:border-transparent dark:hover:border-gray-200 px-1 py-4 border-y border-white hover:border-gray-200 transition-all duration-300">
+                  <a class="dark:text-slate-400 flex items-center text-gray-600" href="#">
                     <span class="inline-block w-4 h-4 mr-3 bg-gradient-to-tr from-blue-500 to-blue-700"></span>
                     React
-                    <span class="text-gray-500 ml-auto">7 articles</span>
+                    <span class="dark:text-slate-400 text-gray-500 ml-auto">7 articles</span>
                   </a>
                 </li>
               </ul>
@@ -141,9 +184,9 @@
             <div class="w-full md:w-1/2">
               <div class="border border-dotted"></div>
               <div class="my-5">
-                <h5 class="font-bold text-lg uppercase text-gray-700 mb-2">Subscribe</h5>
-                <p class="text-gray-600 mb-4">Subscribe to our newsletter.</p>
-                <input placeholder="Your email" type="email" class="text-gray-700 bg-gray-100 p-2 w-full border rounded-t hover:border-gray-600" />
+                <h5 class="font-bold text-lg uppercase text-gray-700 dark:text-white mb-2">Subscribe</h5>
+                <p class="dark:text-slate-400 text-gray-600 mb-4">Subscribe to our newsletter.</p>
+                <input placeholder="Your email" type="email" class="text-gray-700 bg-gray-100 p-2 w-full border rounded-t hover:border-gray-600 transition-all duration-300" />
                 <button class="px-4 py-2 bg-indigo-600 text-white rounded-b w-full hover:bg-indigo-800">Subscribe</button>
               </div>
               <div class="border border-dotted"></div>
@@ -156,42 +199,102 @@
       <div class="mt-20 mb-10">
         <ul class="flex justify-center">
           <li><a class="pagination-item rounded-l-lg" href="#">Previous</a></li>
-          <li><a class="inline-block py-1 px-3 border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700" href="#">1</a></li>
+          <li><a class="inline-block py-1 px-3 border border-gray-300 text-gray-500 hover:bg-gray-100 hover:text-gray-700 transition-all duration-300" href="#">1</a></li>
           <li><a class="pagination-item" href="#">2</a></li>
-          <li><a class="pagination-item text-blue-600 hover:bg-blue-100 hover:text-blue-600" href="#">3</a></li>
+          <li><a class="pagination-item text-blue-600 hover:bg-blue-100 hover:text-blue-600 transition-all duration-300" href="#">3</a></li>
           <li><a class="pagination-item" href="#">4</a></li>
           <li><a class="pagination-item" href="#">5</a></li>
           <li><a class="pagination-item rounded-l-md" href="#">Next</a></li>
         </ul>
       </div>
 
-      <!-- footer -->
-      <footer class="border-t mt-10 py-10 px-2">
-        <div class="md:flex flex-wrap gap-10">
-          <div class="w-full md:w-2/5 mb-5">
-            <h6 class="font-semibold text-gray-700 mb-3">Company</h6>
-            <ul>
-              <li><a class="footer-link" href="#">Team</a></li>
-              <li><a class="footer-link" href="#">About us</a></li>
-            </ul>
-          </div>
-          <div class="w-full md:w-2/5 mb-5">
-            <h6 class="font-semibold text-gray-700 mb-3">Content</h6>
-            <ul>
-              <li><a class="footer-link" href="#">Block</a></li>
-              <li><a class="footer-link" href="#">Policy</a></li>
-              <li><a class="footer-link" href="#">Documentation</a></li>
-            </ul>
-          </div>
-          <div class="w-full md:w-1/5">
-            <h6 class="font-semibold text-gray-700 mb-3">Contact us</h6>
-            <ul class="flex">
-              <!-- иконки соцсетей -->
-              <!-- Оставил как есть -->
-            </ul>
-          </div>
-        </div>
-      </footer>
+        <!-- footer -->
+<footer class="border-t mt-10 py-10 px-2">
+  <div class="md:flex">
+    <!-- Company -->
+    <div class="w-full mb-5 md:w-2/5">
+      <h6 class="font-semibold text-gray-700 dark:text-white mb-3">Company</h6>
+      <ul>
+        <li><a class="footer-link" href="#">Team</a></li>
+        <li><a class="footer-link" href="#">About us</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="w-full mb-5 md:w-2/5">
+      <h6 class="font-semibold text-gray-700 dark:text-white mb-3">Content</h6>
+      <ul>
+        <li><a class="footer-link" href="#">Block</a></li>
+        <li><a class="footer-link" href="#">Policy</a></li>
+        <li><a class="footer-link" href="#">Documentation</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="w-full md:w-1/5">
+      <h6 class="font-semibold text-gray-700 mb-3 dark:text-white">Contact us</h6>
+      <ul class="flex">
+        <li class="mr-2">
+          <a class="footer-link" href="#">
+            <!-- иконка 1 -->
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.068.157 2.148.279 3.238.364.466.037.893.281 1.153.671L12 21l2.652-3.978c.26-.39.687-.634 1.153-.67 1.09-.086 2.17-.208 3.238-.365 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+                />
+              </svg>
+          </a>
+        </li>
+        <li class="mr-2">
+          <a class="footer-link" href="#">
+            <!-- иконка 2 -->
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
+                />
+              </svg>
+          </a>
+        </li>
+        <li class="mr-2">
+          <a class="footer-link" href="#">
+            <!-- иконка 3 -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                />
+              </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
     </div>
   </body>
 </html>
