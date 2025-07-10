@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "tailwindcss build -i src/main.css -o public/styles.css --watch"
+    "build": "tailwindcss build -i src/main.css -o public/styles.css"
   },
   "devDependencies": {
     "postcss": "^8.5.6",
